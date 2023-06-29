@@ -1,5 +1,21 @@
 class BlogsController < ApplicationController
-  def edit
+ 
+
+  def new
+    @blog = Blog.new
+
+  end
+
+  def create
+
+  end
+
+  def show
+    @blog = Blog.find(params[:id])
+
+  end
+  
+   def edit
     @blog = Blog.find(params[:id])
   end
 end
@@ -21,3 +37,5 @@ end
 def blog_params
   params.require(:blog).permit(:photo, :title, :content,)
 end
+end
+
