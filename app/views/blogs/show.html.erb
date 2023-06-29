@@ -1,0 +1,20 @@
+<h1>レシピ詳細</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <th>タイトル</th>
+      <td><%= @blog.title %></td>
+    </tr>
+    <tr>
+      <td><%= @blog.photo %></td>
+    </tr>
+    <tr>
+      <th>レシピ</th>
+      <td><%= @blog.content %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "編集", edit_blog_path(@blog) %>
+<%= link_to "戻る", blogs_path %>
