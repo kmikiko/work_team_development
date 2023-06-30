@@ -12,7 +12,7 @@
 
   <% @blogs.each do |blog| %>
     <tr>
-      <td><%= image_tag blog.photo.image_url(:thumb) if blog.photo.present? %></td>
+      <td><img src="<%= blog.image.url %>"></td>
       <td><%= blog.title %></td>
       <td><%= blog.content %></td>
       <td><%= link_to '詳細', blog_path(blog.id) %></td>
