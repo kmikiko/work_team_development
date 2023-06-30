@@ -7,4 +7,7 @@
     <p><%= blog.title %></p>
     <p><%= blog.content %></p>
     <p><%= image_tag blog.photo.url, size: "150x150" %></p>
-<% end %>
+<p><% end %></p>
+
+<%= link_to 'プロフィール編集', edit_user_path(@user) %> 
+<%= link_to "レシピ一覧", blogs_path %>
