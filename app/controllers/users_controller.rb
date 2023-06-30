@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-    if user == current_user
+    if @user == current_user
       render "edit"
     elsif
       redirect_to blogs_path
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    if @user.create(user_params)
+    if @user.update(user_params)
       redirect_to user_path(@user), notice: "編集しました"
     elsif 
       render :edit
