@@ -1,5 +1,13 @@
 <h1><%= @user.user_name %>のページ</h1>
 
-<p>プロフィール<%= @user.profile %></p>
+<p><%= @user.profile %></p>
+
+
+<p><% @user.blogs.each do |blog|%></p>
+    <p><%= blog.title %></p>
+    <p><%= blog.content %></p>
+    <p><%= image_tag blog.photo.url, size: "150x150" %></p>
+<p><% end %></p>
+
 <%= link_to 'プロフィール編集', edit_user_path(@user) %> 
 <%= link_to "レシピ一覧", blogs_path %>
